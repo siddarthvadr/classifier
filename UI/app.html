@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sports Person Classifier</title>
+    <title>Image Classifier</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="./dropzone.min.css">
     <link rel="stylesheet" href="./app.css">
@@ -12,64 +12,64 @@
 
 <body>
     <nav class="navbar navbar-light bg-light justify-content-center">
-        <a class="navbar-brand" href="#">Sports Person Classifier</a>
+        <a class="navbar-brand" href="#">Friends Classifier</a>
     </nav>
 
     <div class="container">
         <div class="row">
         <div class="col card-wrapper" data-player="aayushi">
-                <div class="card border-0">
-                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                <div class="card  ">
+                    <div class="position-relative   overflow-hidden   custom-circle-image">
                         <img class="w-100 h-100" src="./images/aayushi.jpg" alt="Card image cap">
                     </div>
                     <div class="card-body text-center mt-4">
-                        <h4 class="text-uppercase card-title">aayushi</h4>
+                        <h4 class="card-title">Aayushi </h4>
                         </p>
                     </div>
                 </div>
             </div>            
             <div class="col card-wrapper" data-player="abhishek">
-                    <div class="card border-0">
-                        <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                    <div class="card  ">
+                        <div class="position-relative   overflow-hidden   custom-circle-image">
                             <img class="w-100 h-100" src="./images/abhishek.jpg" alt="Card image cap">
                         </div>
                         <div class="card-body text-center mt-4">
-                            <h4 class="text-uppercase card-title">abhishek</h4>
+                            <h4 class=" card-title">Abhishek</h4>
                             </p>
                         </div>
                     </div>
             </div>            
             <div class="col card-wrapper" data-player="binod">
-                    <div class="card border-0">
-                        <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                    <div class="card  ">
+                        <div class="position-relative   overflow-hidden   custom-circle-image">
                             <img class="w-100 h-100" src="./images/binod.jpg" alt="Card image cap">
                         </div>
                         <div class="card-body text-center mt-4">
-                            <h4 class="text-uppercase card-title">binod</h4>
+                            <h4 class="   card-title">Binod</h4>
                             </p>
                         </div>
                     </div>
             </div>          
 
             <div class="col card-wrapper" data-player="vandana">
-                <div class="card border-0">
-                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                <div class="card  ">
+                    <div class="position-relative   overflow-hidden   custom-circle-image">
                         <img class="w-100 h-100" src="./images/vandana.jpg" alt="Card image cap">
                     </div>
                     <div class="card-body text-center mt-4">
-                        <h4 class="text-uppercase card-title">vandana</h4>
+                        <h4 class="   card-title">Vandana</h4>
                         </p>
                     </div>
                 </div>
             </div>      
 
             <div class="col card-wrapper" data-player="sid">
-                <div class="card border-0">
-                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                <div class="card  ">
+                    <div class="position-relative   overflow-hidden   custom-circle-image">
                         <img class="w-100 h-100" src="./images/sid.jpg" alt="Card image cap">
                     </div>
                     <div class="card-body text-center mt-4">
-                        <h4 class="text-uppercase card-title">sid</h4>
+                        <h4 class="   card-title">Siddharth</h4>
                         </p>
                     </div>
                 </div>
@@ -77,10 +77,10 @@
 
         </div>
 
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-sm-4">
                 <div class="row">
-                    <div class="col-12 mx-auto">
+                    <div class="col-12  ">
                         <form action="/file-upload" class="dropzone" id="dropzone">
                             <div class="dz-message needsclick">
                                 <img src="./images/upload.png" width="50vw" height="50vw"><br>
@@ -89,20 +89,22 @@
                         </form>
                     </div>
                 </div>
-                <div class="row mt-3">
-                    <div class="col-3 mx-auto">
+                <div class="row mt-3 justify-content-center">
+                    <div class="col-3  ">
                         <button id="submitBtn" type="button" class="btn btn-success">Classify</button>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="row">
             
             <div class="col-sm-8 error" id="error" >
                 <p>Can't classify image. Classifier was not able to detect face and two eyes properly</p>    
             </div>
 
-            <div class="col-sm-4" id="resultHolder">
+            <div class="col-sm-2 mt-3" id="resultHolder">
             </div>
-            <div class="col-sm-4" id="divClassTable">
+            <div class="col-sm-4 mt-3" id="divClassTable">
                 <table id="classTable">
                         <tr>
                             <th>Player</th>
@@ -127,6 +129,76 @@
                         <tr>
                             <td>Siddharth</td>
                             <td id="score_sid"></td>
+                        </tr>
+                </table>
+            </div>
+            
+        </div>
+
+        <div class="row" id="divperson-2">
+            
+            <div class="col-sm-8 error" id="error1" >
+                <p>Can't classify image. Classifier was not able to detect face and two eyes properly</p>    
+            </div>
+
+            <div class="col-sm-2 mt-3" id="resultHolder1">
+            </div>
+            <div class="col-sm-4 mt-3" id="divClassTable1">
+                <table id="classTable">
+                        <tr>
+                            <th>Person</th>
+                            <th>Probability Score</th>
+                        </tr>
+                        <tr>
+                            <td>Aayushi</td>
+                            <td id="score0_aayushi"></td>
+                        </tr>
+                        <tr>
+                            <td>Abhishek</td>
+                            <td id="score0_abhishek"></td>
+                        </tr>
+                        <tr>
+                            <td>Binod</td>
+                            <td id="score0_binod"></td>
+                        </tr>
+                        <tr>
+                            <td>Vandana</td>
+                            <td id="score0_vandana"></td>
+                        </tr>
+                        <tr>
+                            <td>Siddharth</td>
+                            <td id="score0_sid"></td>
+                        </tr>
+                </table>
+            </div>
+
+            <div class="col-sm-2 mt-3" id="resultHolder2">
+            </div>
+            <div class="col-sm-4 mt-3" id="divClassTable2">
+                <table id="classTable">
+                        <tr>
+                            <th>Person</th>
+                            <th>Probability Score</th>
+                        </tr>
+                        <tr>
+                            <td>Aayushi</td>
+                            <td id="score1_aayushi"></td>
+                        </tr>
+                        <tr>
+                            <td>Abhishek</td>
+                            <td id="score1_abhishek"></td>
+                        </tr>
+                        <tr>
+                            <td>Binod</td>
+                            <td id="score1_binod"></td>
+                        </tr>
+                        <tr>
+                            <td>Vandana</td>
+                            <td id="score1_vandana"></td>
+                        </tr>
+                        <tr>
+                            <td>Siddharth</td>
+                            <td id="score1_sid"></td>
                         </tr>
                 </table>
             </div>
