@@ -82,20 +82,14 @@ def get_cropped_image_if_2_eyes(image_path, image_base64_data):
                 cropped_faces.append(roi_color)
     return cropped_faces
 
-def get_b64_test_image_for_virat():
+def get_b64_test_image_for_sid():
     with open("b64.txt") as f:
         return f.read()
 
 if __name__ == '__main__':
     load_saved_artifacts()
 
-    #print(classify_image(get_b64_test_image_for_virat(), None))
-
+    
+    #print(classify_image(get_b64_test_image_for_sid, None))
     print(classify_image(None, "./test_images/binod_sid.jpg"))
-    #print(classify_image(None, "./test_images/federer2.jpg"))
-    # print(classify_image(None, "./test_images/virat1.jpg"))
-    # print(classify_image(None, "./test_images/virat2.jpg"))
-    # print(classify_image(None, "./test_images/virat3.jpg")) # Inconsistent result could be due to https://github.com/scikit-learn/scikit-learn/issues/13211
-    # print(classify_image(None, "./test_images/serena1.jpg"))
-    # print(classify_image(None, "./test_images/serena2.jpg"))
-    # print(classify_image(None, "./test_images/sharapova1.jpg"))
+   
