@@ -46,7 +46,7 @@ def load_saved_artifacts():
 
     global __model
     if __model is None:
-        with open('./artifacts/saved_model_knn.pkl', 'rb') as f:
+        with open('./artifacts/saved_model_lr.pkl', 'rb') as f:
             __model = joblib.load(f)
     print("loading saved artifacts...done")
 
@@ -97,12 +97,17 @@ def get_b64_test_image_for_sid():
 if __name__ == '__main__':
     load_saved_artifacts()
 
-    # print(classify_image(get_b64_test_image_for_sid, None))
-    # print(classify_image(None, "./test_images/binod_sid.jpg"))
-    #print(classify_image(None, "./test_images/sid.jpg"))
-    #print(classify_image(None, "./test_images/spects.jpg"))
-    #print(classify_image(None, "./test_images/front.jpg"))
-    #print(classify_image(None, "./test_images/left.jpg"))
-    #print(classify_image(None, "./test_images/right.jpg"))
-    #print(classify_image(None, "./test_images/virat1.jpg"))
-    #print(classify_image(None, "./test_images/virat2.jpg"))
+    #print(classify_image(get_b64_test_image_for_sid, None))
+    #print(classify_image(None, "./test_images/aayushi1.jpg"))
+    #print(classify_image(None, "./test_images/aayushi2.jpg"))
+    #print(classify_image(None, "./test_images/abhishek1.jpg"))
+    #print(classify_image(None, "./test_images/abhishek2.jpg"))
+    #print(classify_image(None, "./test_images/binod1.jpg"))
+    #print(classify_image(None, "./test_images/binod2.jpg"))
+    #print(classify_image(None, "./test_images/sid1.jpg"))
+    #print(classify_image(None, "./test_images/sid2.jpg"))
+    #print(classify_image(None, "./test_images/vandana1.jpg"))
+    #print(classify_image(None, "./test_images/vandana2.jpg"))
+    print(classify_image(None, "./test_images/binod_sid.jpg"))
+    
+   
